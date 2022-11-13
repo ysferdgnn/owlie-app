@@ -1,7 +1,6 @@
 package com.ysferdgnn.owlieapp.model
 
 import com.ysferdgnn.owlieapp.dto.request.AppUserLoginRequestDTO
-import com.ysferdgnn.owlieapp.dto.request.AppUserRegisterRequestDTO
 import org.hibernate.annotations.GenericGenerator
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

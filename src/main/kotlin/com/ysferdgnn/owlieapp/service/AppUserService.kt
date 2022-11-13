@@ -7,9 +7,7 @@ import com.ysferdgnn.owlieapp.exception.UserExistsError
 import com.ysferdgnn.owlieapp.exception.UserNotFoundException
 import com.ysferdgnn.owlieapp.model.AppUser
 import com.ysferdgnn.owlieapp.repository.AppUserRepository
-import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
-import org.springframework.web.client.HttpClientErrorException.Unauthorized
 
 @Service
 class AppUserService (
