@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  banner:
+    location: classpath:banner.txt
+
   datasource:
     url: jdbc:postgresql://localhost:5432/owlie
     username: owlieAdmin
