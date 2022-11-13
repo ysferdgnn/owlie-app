@@ -4,8 +4,10 @@ import com.ysferdgnn.owlieapp.dto.request.AppUserLoginRequestDTO
 import com.ysferdgnn.owlieapp.exception.UnAuthorizedException
 import com.ysferdgnn.owlieapp.exception.UserBadCredentials
 import com.ysferdgnn.owlieapp.exception.UserExistsError
+import com.ysferdgnn.owlieapp.exception.UserNotFoundException
 import com.ysferdgnn.owlieapp.model.AppUser
 import com.ysferdgnn.owlieapp.repository.AppUserRepository
+import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
 import org.springframework.web.client.HttpClientErrorException.Unauthorized
 
@@ -41,5 +43,9 @@ class AppUserService (
             .findByUsernameAndPassword(appUserLoginRequestDTO.username,appUserLoginRequestDTO.password)
             ?: throw UnAuthorizedException()
 
+    }
+
+    fun findByUsername(username:String?): AppUser? {
+        return appUserRepository.findByUsername(username) ?: throw UserNotFoundException()
     }
 }

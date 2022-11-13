@@ -3,16 +3,21 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/owlstragram
-    username: owlstragramUser
+    url: jdbc:postgresql://localhost:5432/owlie
+    username: owlieAdmin
     password: 123456
     continue-on-error: true
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
 
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+
+jwt:
+  appSecret: c11033e2755bc3472afb298cb3e85cd53472e459e49ce9dc0f63948d7ff6bcfd9febc260ad8bfbe6d64a280e0db033244b00b5d0eb820a96e34be861d956bebf
+  expiresIn: 500000
+  refreshTokenExpiresIn: 1000
