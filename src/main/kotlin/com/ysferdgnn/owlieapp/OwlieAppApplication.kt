@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableWebSecurity
+
 class OwlieAppApplication
 
 fun main(args: Array<String>) {
